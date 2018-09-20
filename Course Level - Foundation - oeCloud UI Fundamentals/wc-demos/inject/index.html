@@ -1,0 +1,34 @@
+<!-- how to Inject Data into Templates -->
+
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <template>
+        <p>
+            This
+            <span class="description"></span>
+            template has been copied!
+            <span class="count-copy"></span> times.
+        </p>
+
+    </template>
+    <button onclick="copyTemplate()">Copy template</button>
+    <script>
+      var numberOfCopies = 0;
+    function copyTemplate() {
+      var template = document.querySelector('template');
+      var clone = document.importNode(template.content, true);
+      //replace placeholders
+      clone.querySelector('.description').textContent = 'Hello';
+      clone.querySelector('.count-copy').textContent = ++numberOfCopies;
+      document.body.appendChild(clone);
+    }
+
+
+    </script>
+</body>
+
+</html>

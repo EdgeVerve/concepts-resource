@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="import" href="../../../bower_components/polymer/polymer.html" />
+</head>
+
+<body>
+    <!-- TWO STEPS 
+Step 1: Component Template Declaration
+Step 2: Component Declaration
+-->
+
+    <!-- Step 1: Component Template Declaration -->
+    <dom-module id="hello-element">
+        <template>
+            Hello there
+        </template>
+    </dom-module>
+    <!-- Step 2: Component Declaration -->
+    <script>
+            HTMLImports.whenReady(function () {
+                Polymer({
+                    is: "hello-element"
+                })
+            })  
+        </script>
+
+
+</body>
+
+</html>

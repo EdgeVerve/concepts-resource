@@ -1,0 +1,11 @@
+ {"Persons":[
+    {"firstName":"Jane","age":"22","city":"LA"},
+    {"firstName":"Jim","age":"25","city":"NY"},
+    {"firstName":"Jack","age":"27","city":"CH"}
+ ],
+ "degrees":[
+    {"UG":"BE","PG":"ME"},
+    {"UG":"BS","PG":"MS"},
+    {"UG":"BTECH","PG":"MTECH"}
+]
+}

@@ -1,0 +1,63 @@
+<!--  3 steps to register and 
+  4 ways to Instantiate Extended Custom Elements -->
+
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <!-- 1 Decare element -->
+    <button is="oe-button" message="Hello from oeCloud!"></button>
+
+    <script>
+        //1 Create a prototype that extends a native HTML element. 
+        var oeButtonProto = Object.create(HTMLButtonElement.prototype);
+
+        //2 Add any additional markup you like using the lifecycle callback methods.
+        //Here we're simply setting the innerHTML (which sets the label on the button, just like with regular buttons)
+        //And we're setting the value of the button.
+        //We can even style the button here, though if we use shadow DOM styling via a <style> tag would likely be preferable
+        oeButtonProto.createdCallback = function () {
+            this.innerHTML = "oe Button";
+            this.value = "Default oe button value";
+            this.style.color = 'blue';
+            this.style.backgroundColor = 'white';
+        }
+
+        //3. Add additional functions to handle behaviors
+        oeButtonProto.displayMessage = function () {
+            var defaultHello = 'Hello from oeCloud.io!';
+            var message = this.getAttribute('message') || defaultHello;
+            alert(message);
+        }
+        //4. When all configured, register the extended custom element
+        var oeButton = document.registerElement('oe-button', {
+            prototype: oeButtonProto,
+            extends: 'button'
+        });
+
+
+        //   document.body.innerHTML = '<button is="oe-button" message="Hello from oeCloud.io!"></button>';
+        //5. Attach click handler on the instance
+        var button = document.querySelector('button');
+        button.onclick = function () {
+            this.displayMessage();
+        }
+
+        //2 New operator
+        var button = new oeButton();
+        document.body.appendChild(button);
+
+        //3 CreateElement
+        var button = document.createElement('button', 'oe-button');
+        document.body.appendChild(button);
+        
+ //4 innerHTML
+ //document.body.innerHTML = '<button is="oe-button" message="Hello from oeCloud.io!"></button>';
+
+
+    </script>
+</body>
+
+</html>

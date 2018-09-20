@@ -1,0 +1,33 @@
+<!-- Template Tag is inert -->
+<!-- Define and Clone Template Tag -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Defining and Cloning Templates!</title>
+</head>
+
+<body>
+    <template>
+            <p>I am not visible unless you clone me! I exist
+                    <strong>in a template!</strong>
+                </p>
+                <script>
+                    alert('This alert method will not be called until cloned');
+                </script>
+                <img src="somepath/someimage.jpg" />
+
+    </template>
+    <script>
+     var template = document.querySelector('template');
+     var clone = document.importNode(template.content, true);
+     document.body.appendChild(clone);
+
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="../../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="../../bower_components/polymer/polymer.html" />
+
+</head>
+
+<body>
+    <hello-element></hello-element>
+    <dom-module id="hello-element">
+        <template>
+            <div>{{message.text}}</div>
+        </template>
+    </dom-module>
+    <script>
+        HTMLImports.whenReady(function () {
+            Polymer({
+                is: "hello-element",
+                properties: {
+                    message: {
+                        type: Object,
+                        value: function () {
+                            return {
+                                text: "Task Completed",
+                                status: "success"
+                            }
+                        }
+                    }
+                },
+                ready: function () {
+                  //  this.message.text = "Successfully Updated"; 
+                 // this.message = { text: "Successfully Updated", status: "success" } //Alternative 1
+                 //this.notifyPath( "message.text", "Successfully Updated" ); //Alternative 2
+                 this.set("message.text", "Successfully Updated") 
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+// POST : ProductCatalog
+// POST : Single ProductCatalog Instance
+{
+    "code": "M001",
+    "name": "Samsung Galaxy S7",
+    "category": "Mobiles",
+    "price": 46000,
+    "offeredSince": "2016-05-01",
+    "active": true,
+    "description": "Samsung Galaxy S7 Android mobile phone"
+}
+// POST : ProductCatalog
+// POST : Multiple ProductCatalog Instances
+[
+    {
+        "code": "M002",
+        "name": "iPhone 10",
+        "category": "Mobiles",
+        "price": 96000,
+        "offeredSince": "2016-05-01",
+        "active": true,
+        "description": "Apple iPhone 10 mobile phone"
+    },
+    {
+        "code": "M003",
+        "name": "Samsung Galaxy S8",
+        "category": "Mobiles",
+        "price": 75000,
+        "offeredSince": "2016-05-01",
+        "active": true,
+        "description": "Samsung Galaxy S8 Android mobile phone"
+    },
+    {
+        "code": "M004",
+        "name": "Moto Gx",
+        "category": "Mobiles",
+        "price": 46000,
+        "offeredSince": "2016-05-01",
+        "active": true,
+        "description": "Mororola Gx Flip"
+    }
+]

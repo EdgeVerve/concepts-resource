@@ -1,0 +1,34 @@
+{
+    "name": "ProductCatalog",
+    "base": "BaseEntity",
+    "strict": false,
+    "plural": "ProductCatalogs",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "code": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "category": {
+            "type": "string"
+        },
+        "price": {
+            "type": "number"
+        },
+        "offeredSince": {
+            "type": "date"
+        },
+        "active": {
+            "type": "boolean"
+        },
+        "description": {
+            "type": "string"
+        }
+    }
+}
+

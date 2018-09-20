@@ -1,0 +1,14 @@
+{
+    "name": "College",
+    "base": "BaseEntity",
+    "plural": "Colleges",
+   
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "city": {
+            "type": "string"
+        }
+    }
+}
